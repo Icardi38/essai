@@ -1,3 +1,8 @@
 <% @les_livres.each do |livre| %>
   <p> <%= livre.title %> </p>
   <% end %>
+
+<%= form_tag "/books", method: "post" do %>
+  <input type="texte" name="title"  />
+  <input type="submit" value="Ajouter un livre"  />
+<% end %>
