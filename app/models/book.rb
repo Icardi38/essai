@@ -8,4 +8,7 @@ class Book < ActiveRecord::Base
   validates :title, uniqueness: {
     message: "Ce titre est déjà utilisé."
   }
+
+  scope :polar, -> {where(category_id: 1)}
+  scope :jeunesse, -> {where(category_id: 2)}
 end
